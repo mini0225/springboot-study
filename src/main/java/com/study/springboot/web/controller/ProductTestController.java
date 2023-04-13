@@ -52,7 +52,8 @@ public class ProductTestController {
     }
 
     @ResponseBody
-    //데이터 응답시 필수, view가 필요없음.
+    //데이터 응답시 필수, view(html)가 필요없음.
+    //return 값을 페이지에 띄운다 ControllerStudy 확인
     @PostMapping("/api/product/2")
     public String registerProduct(@RequestBody ProductDto productDto){ //데이터 전송이 json 형태일 경우 @RequestBody 필요
 
