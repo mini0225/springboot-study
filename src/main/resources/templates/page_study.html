@@ -31,6 +31,8 @@
                 data:JSON.stringify(student),
                 dataType:"text",//받는데이터형식
                 success : response =>{
+                //response는 success함수의 parameter, 서버로부터 데이터를 받는다.
+                //=return 값임.
                     alert("요청 성공");
                     alert(response);
                     
@@ -49,13 +51,13 @@
                 type:"get", //method
                 url:"/study/student/2", //요청 url
 
-                // contentType:"application/json",
+                // contentType:"application/json", 보내는거없으니까
                 // data:JSON.stringify(student),
 
-                dataType:"json",//받는데이터형식
+                dataType:"json",//받는데이터형식 
                 success : response =>{
                     alert("요청 성공");
-                    console.log(response);
+                    console.log(response); //requestStudyDto 객체
                 },
                 error : response =>{
                     alert("요청실패");
